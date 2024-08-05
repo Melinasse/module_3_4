@@ -4,6 +4,9 @@ def single_root_words(root_word, *other_words):
     for i in other_words:
         if root_word in i.lower():
             same_words.append(i)
+            continue
+        if i.lower() in root_word:
+            same_words.append(i)
             print(i)
     return same_words
 
